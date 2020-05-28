@@ -264,7 +264,6 @@ def viewmemberhistory():
 def viewmember():
     return flask.render_template('viewmember.html')
 
-if __name__ == '__main__':
-    app.run(port = 9732, debug = True)
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
