@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Invoice</title>
+</head>
+<h1><a href = "{{ url_for('home') }}"><img src="{{url_for('static', filename='logo.jpg') }}" alt="logo" width="200" height="100"></a> </h1>
+<body>
+    <h1 align="center"> JP Salon Invoice</h1>
+    <h2>Invoice number: {{I}} </h2>
+    <h2>Customer name: {{n}}</h2>
+    <h2>Member ID: {{m}}</h2>
+    <br>
+    <table align = "center" border = "1">
+        <tr>
+            <th>Types of service</th>
+            <th>Prices</th>
+        </tr>
+        {% for i in range(purchase|length) %}
+            <tr>
+                <td>{{purchase[i][0]}}</td>
+                <td>{{purchase[i][1]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Search Day</title>
+</head>
+<h1><a href = "{{url_for('home') }}"><img src = "{{ url_for('static', filename = 'logo.jpg') }} " alt = "logo" width = "200" height = "100"> </a></h1>
+<form action = "{{ url_for('viewday') }}" method = "POST">
+	<table>
+		<tr>
+			<td>
+				Enter Date:
+			</td>
+			<td>
+				<input name = 'date' placeholder = "Date">
+			</td>
+		</tr>
+	</table>
+	<input type ="submit" value = "Enter">
+</form>
+
+</html>

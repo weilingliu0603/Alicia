@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Member History</title>
+</head>
+<h1><a href = "{{url_for('home') }}"><img src = "{{ url_for('static', filename = 'logo.jpg') }}" alt = "logo" width = "200" height = "100"> </a></h1>
+<h1 align ="center">History of {{ID}}</h1>
+<table border = "1">
+	{% for i in range(lst_history|length) %}
+		<tr>
+			<td>{{lst_history[i][0]}}</td>
+			<td>{{lst_history[i][1]}}</td>
+			<td>{{lst_history[i][2]}}</td>
+		</tr>
+	{% endfor %}
+</table>
+
+
+
+</html>

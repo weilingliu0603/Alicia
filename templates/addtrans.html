@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Transaction</title>
+</head>
+    <h1><a href = "{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="logo" width="200" height="100"></a> </h1>
+    <h1 align ="center">Welcome {{n}}</h1>
+<body>
+    <form action = "{{ url_for('transadded') }}" method = "POST">
+        <br>
+
+        <br>
+        <table border = '2' align ="center">
+            <tr>
+                <th>Type of services</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Cut (short length)</td>
+                <td>35.00</td>
+            </tr>
+            <tr>
+                <td>Cut (medium length)</td>
+                <td>40.00</td>
+            </tr>
+            <tr>
+                <td>Cut (long length)</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>Colour</td>
+                <td>100.00</td>
+            </tr>
+            <tr>
+                <td>Highlight (half head)</td>
+                <td>150.00</td>
+            </tr>
+            <tr>
+                <td>Highlight (full head)</td>
+                <td>200.00</td>
+            </tr>
+            <tr>
+                <td>Perm</td>
+                <td>200.00</td>
+            </tr>
+            <tr>
+                <td>Rebonding</td>
+                <td>180.00</td>
+            </tr>
+            <tr>
+                <td>Treatment</td>
+                <td>80.00</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h2 align ="center">Enter your order</h2>
+        <table align ="center">
+            <tr>
+                <td>Cut</td>
+                <td><input name = 'cut' placeholder = '(short/medium/long)'></td>
+            </tr>
+            <tr>
+                <td>Colour</td>
+                <td><input name = 'colour' placeholder = '(yes/no)'></td>
+            </tr>
+            <tr>
+                <td>Highlight</td>
+                <td><input name = 'highlight' placeholder = '(half/full)'></td>
+            </tr>
+            <tr>
+                <td>Perm</td>
+                <td><input name = 'perm' placeholder = '(yes/no)'></td>
+            </tr>
+            <tr>
+                <td>Rebonding</td>
+                <td><input name = 'rebonding' placeholder = '(yes/no)'></td>
+            </tr>
+            <tr>
+                <td>Treatment</td>
+                <td><input name = 'treatment' placeholder = '(yes/no)'></td>
+            </tr>
+        </table>
+        <br>
+        <input type = "submit" value = 'Place order'>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1 align="center"><img src="{{ url_for('static', filename = 'logo.jpg') }}" alt="logo" height = "300" width = "500"> </h1>
+    <h1 align="center">Welcome to the JP Salon! </h1>
+    <table border = "0" align = "center">
+        <tr>
+            <th><a href="{{ url_for('admin') }}"><img src="{{ url_for('static', filename = 'admin.jpg') }}" alt="Add Member" width="200" height="200" ></a></th>
+            <th><a href="{{ url_for('cuthair') }}"><img src="{{ url_for('static', filename = 'cuthair.jpg') }}" alt="Add Transaction" width="200" height="200"></a></th>
+        </tr>
+        <tr>
+            <td>I'm a Staff</td>
+            <td>I'm here to cut hair</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Cut Hair</title>
+</head>
+<h1><a href = "{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'logo.jpg') }}" alt="logo" width="200" height="100"></a> </h1>
+<body>
+    <h2 align = "center">Are you a member?</h2>
+    <table align = "center">
+        <tr>
+            <td><a  href="{{ url_for('member') }}"><img src ="{{ url_for('static', filename='member.jpg') }}" alt =  "Member" ></a></td>
+            <td><a  href="{{ url_for('addmember') }}"><img src ="{{ url_for('static', filename='nonmember.jpg') }}" alt =  "Non-member"></a></td>
+        </tr>
+    </table>
+</body>
+</html>

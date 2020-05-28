@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Daily transaction</title>
+</head>
+<h1><a href = "{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="logo" width="200" height="100"></a> </h1>
+<h1 align="center">Daily transaction</h1>
+<body>
+    <table align = "center" border = "1">
+        <tr>
+            <th>Date</th>
+            <th>Revenue</th>
+        </tr>
+        {% for i in range(revenues|length) %}
+            <tr>
+                <td>{{dates[i]}}</td>
+                <td>{{revenues[i]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

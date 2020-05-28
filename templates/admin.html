@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>admin</title>
+</head>
+<h1><a href = "{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="logo" width="200" height="100"></a> </h1>
+<body>
+    <br>
+    <br>
+    <form action = "{{url_for('action')}}" method = "POST" >
+        <label for="choice" >What are you here for:</label>
+        <select id = 'choice' name = 'choice'>
+            <option value = "Update member's data">Update member's data</option>
+            <option value = "View daily transaction">View daily transaction</option>
+            <option value = "View monthly transaction">View monthly transaction</option>
+            <option value = "View member's transaction history">View member's transaction history</option>
+        </select>
+        <input type = "submit" value = "Enter">
+    </form>
+</body>
+</html>

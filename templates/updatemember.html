@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Update</title>
+</head>
+<h1><a href = "{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="logo" width="200" height="100"></a></h1>
+<h1 align = "center">Update below</h1>
+<body>
+    <br>
+    <br>
+    <form action = "{{ url_for('updated') }}" method = "POST">
+        <table align = "center">
+            <tr>
+                    Enter your member ID
+            </tr>
+            <tr>
+                <input name = 'ID' placeholder="ID">
+            </tr>
+            <br>
+            <br>
+            <tr>
+                Contact No (-1 if null)
+            </tr>
+            <tr>
+                <input name = "contact" placeholder="contact">
+            </tr>
+            <br>
+            <tr>
+                Email (-1 if null)
+            </tr>
+            <tr>
+                <input name = "email" placeholder="email">
+            </tr>
+        </table>
+        <input type = "submit" value = "Change">
+    </form>
+</body>
+</html>
